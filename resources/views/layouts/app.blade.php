@@ -30,7 +30,7 @@
     <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: linear-gradient(180deg, #ebd618, #136ef7);">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

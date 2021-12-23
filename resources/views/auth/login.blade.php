@@ -13,7 +13,7 @@
                     @csrf
                     <!-- email input -->
                     <div class="form-outline mb-4">
-                        <label for="email" class="form-label fs-5">{{ __('E-Mail Address') }}</label>
+                        <label for="email" class="form-label fs-5 text-light">{{ __('E-Mail Address') }}</label>
                         <input id="email" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
@@ -25,7 +25,7 @@
 
                     <!-- Password -->
                     <div class="form-outline mb-4">
-                        <label for="password" class="form-label fs-5">{{ __('Password') }}</label>
+                        <label for="password" class="form-label fs-5 text-light">{{ __('Password') }}</label>
                         <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                         @error('password')
@@ -40,10 +40,10 @@
                         <!-- checkBox -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                            <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
+                            <label class="form-check-label text-light" for="remember">{{ __('Remember Me') }}</label>
                         </div>
                         @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
+                        <a class="btn btn-link text-light fw-bold" href="{{ route('password.request') }}" style="text-decoration: none;">{{ __('Forgot Your Password?') }}</a>
                         @endif
                     </div>
 
@@ -51,7 +51,7 @@
                     <button type="submit" class="btn btn-primary btn-lg btn-block w-100">Sign in</button>
 
                     <div class="divider d-flex justify-content-center my-4">
-                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                        <p class="text-center fw-bolder mx-3 mb-0">OR</p>
                     </div>
 
                     <a class="btn btn-primary btn-lg btn-block mb-3 w-100" style="background-color: #3b5998;" href="#!" role="button">
