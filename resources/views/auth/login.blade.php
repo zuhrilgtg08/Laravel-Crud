@@ -54,10 +54,10 @@
                         <p class="text-center fw-bolder mx-3 mb-0">OR</p>
                     </div>
 
-                    <a class="btn btn-primary btn-lg btn-block mb-3 w-100" style="background-color: #3b5998;" href="#!" role="button">
+                    <a class="btn btn-primary btn-lg btn-block mb-3 w-100" style="background-color: #3b5998;" href="https://web.facebook.com/" role="button">
                         <li class="fab fa-facebook-f me-2"></li>Continue with Facebook
                     </a>
-                    <a class="btn btn-primary btn-lg btn-block w-100" style="background-color: #dd4b39;" href="#!" role="button">
+                    <a class="btn btn-primary btn-lg btn-block w-100" style="background-color: #dd4b39;" href="https://accounts.google.com/" role="button">
                         <li class="fab fa-google me-2"></li>Continue with Google
                     </a>
                 </form>
