@@ -26,11 +26,17 @@
     <form method="POST" action="{{ url('barang', $barang->id) }}">
         @csrf
         @method('PUT')
-        <input type="text" name="namaBarang" value="{{ $barang->namaBarang }}" placeholder="Ubah Barang...">
+        <div class="form-group mb-3">
+            <label for="nama" class="form-label">Nama Barang : </label>
+            <input type="text" name="namaBarang" class="form-control" id="nama" value="{{ $barang->namaBarang }}" placeholder="Ubah Barang...">
+        </div>
 
-        <input type="text" name="jumlahBarang" value="{{ $barang->jumlahBarang }}" placeholder="Ubah Jumlah Barang...">
+        <div class="form-group mb-3">
+            <label for="jumlah" class="form=label">Jumlah Barang : </label>
+            <input type="text" name="jumlahBarang" class="form-control" id="jumlah" value="{{ $barang->jumlahBarang }}" placeholder="Ubah Jumlah Barang...">
+        </div>
 
-        <button class="btn btn-primary w-23">Kirim</button>
+        <button class="btn btn-primary" style="width: 100px;">Kirim</button>
     </form>
 </div>
 @endsection
