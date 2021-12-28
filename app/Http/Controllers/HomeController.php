@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-// use App\Models\siswa;
 
 use Illuminate\Http\Request;
 
@@ -24,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $siswa = siswa::all();
-
-        // return view('siswa.index', ['siswa' => $siswa]);
         return view('home');
     }
 }
