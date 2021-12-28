@@ -27,11 +27,3 @@ Route::resource('guru', GuruController::class);
 Route::resource('siswa', SiswaController::class);
 Route::resource('kelas', KelasController::class);
 Route::resource('ruang', RuangController::class);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
