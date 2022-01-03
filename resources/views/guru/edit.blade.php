@@ -1,8 +1,8 @@
 @extends('layouts.apk')
-@section('serverGuru', 'ubah data ')
+@section('title', 'Edit Data Guru')
 @section('content')
 <div class="wrapper">
-    <h1 class="text-center">Ubah Data Guru</h1>
+    <h1 class="text-center">Ubah Data</h1>
 
     @if(session('success'))
     <div class="alert alert-success">

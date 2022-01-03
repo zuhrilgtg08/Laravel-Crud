@@ -1,8 +1,8 @@
 @extends('layouts.apk')
-@section('guru', 'buat data baru guru')
+@section('title', 'Tambah Data Guru')
 @section('content')
 <div class="wrapper">
-    <h1 class="text-center">Tambah Nama Guru Baru</h1>
+    <h2 class="text-center">Tambah Data Guru</h2>
 
     <!-- logika if -->
     @if(session('success'))
@@ -26,8 +26,8 @@
     @endif
 
     <div class="card">
-        <div class="card-header bg-secondary">
-            <h5 class="text-center text-light">Tambah Data</h5>
+        <div class="card-header bg-success">
+            <h5 class="text-center text-light">Form Tambah</h5>
         </div>
 
         <div class="card-body">

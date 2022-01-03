@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
+
 use Illuminate\Http\Request;
+use App\Models\dasboard;
 
 class DasboardController extends Controller
 {
@@ -11,22 +12,10 @@ class DasboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-
-        return view('dasboard');
+        $dasboard = dasboard::all();
+        return view('dasboard.index', ['dasboard'=>$dasboard]);
     }
 
     /**
