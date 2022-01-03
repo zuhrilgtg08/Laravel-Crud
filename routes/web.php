@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/dasboard', 'DasboardController@index');
+
 
 Route::get('/', function () {
     return view('welcome');
