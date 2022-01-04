@@ -9,7 +9,7 @@ use App\Htpp\Controllers\HomeController;
 use App\Http\Controllers\DasboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\JadwalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +34,7 @@ Route::resource('siswa', SiswaController::class);
 Route::resource('kelas', KelasController::class);
 Route::resource('ruang', RuangController::class);
 Route::resource('dasboard', DasboardController::class);
-
+Route::resource('jadwal', JadwalController::class);
 
 Auth::routes();
 
