@@ -1,9 +1,9 @@
 @extends('layouts.apk')
-@section('Ruang', 'Semua Ruang')
+@section('title', 'Data Ruangan')
 @section('content')
 
 <div class="wrapper">
-    <h1 style="text-align: center;">Crud Data Ruangan</h1>
+    <h1 style="text-align: center;">Tabel Data Ruangan</h1>
 
     @if (session('success'))
     <div class=" alert alert-success">
@@ -17,22 +17,22 @@
     <!-- table -->
 
     <table class="table table-striped">
-        <thead class="text-center">
-            <tr class="table-dark">
+        <thead class="text-center thead-dark">
+            <tr class="text-light">
                 <th>Nomor Ruangan</th>
                 <th>Nama Ruangan</th>
                 <th>Lantai Ruangan</th>
-                <th colspan="2">Edit Data Ruangan</th>
+                <th colspan="2">Edit Data</th>
             </tr>
         </thead>
 
         <tbody>
             @foreach($ruang as $r)
             <tr>
-                <td style="width: 200px; text-align:center;">{{ $r->nomor_ruangan}}</td>
-                <td style="width: 300px; text-align:center;">{{ $r->nama_ruangan }}</td>
-                <td style="width: 300px; text-align:center;">{{ $r->lantai_ruangan }}</td>
-                <td style="width: 100px; text-align:center;"><button class=" btn btn-success" style="width:100px;"><a href="{{ route('ruang.edit', $r->id) }}" class="text-white" style="text-decoration: none;">Edit</a></button></td>
+                <td style="width: 200px; text-align:center; color:#111;">{{ $r->nomor_ruangan}}</td>
+                <td style="width: 300px; text-align:center; color:#111;">{{ $r->nama_ruangan }}</td>
+                <td style="width: 300px; text-align:center; color:#111;">{{ $r->lantai_ruangan }}</td>
+                <td style="width: 100px; text-align:center; color:#111;"><button class=" btn btn-success" style="width:100px;"><a href="{{ route('ruang.edit', $r->id) }}" class="text-white" style="text-decoration: none;">Ubah</a></button></td>
                 <form method="POST" action="{{ url('ruang', $r->id ) }}">
                     @csrf
                     @method('DELETE')

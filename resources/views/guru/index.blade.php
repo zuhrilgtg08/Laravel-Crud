@@ -20,7 +20,7 @@
 @endif
 <table class="table table-striped">
 
-    <tr class="text-center bg-info text-light">
+    <tr class="text-center bg-info text-white fw-normal">
         <th>No</th>
         <th>Nip</th>
         <th>Nama Guru</th>
@@ -32,10 +32,10 @@
     @endphp
     @foreach ($guru as $g)
     <tr class="text-center">
-        <td>{{ $no++ }}</td>
-        <td>{{ $g->nip }}</td>
-        <td>{{ $g->nama_guru }}</td>
-        <td>{{ $g->mata_pelajaran }}</td>
+        <td style="color: #111;">{{ $no++ }}</td>
+        <td style="color: #111;">{{ $g->nip }}</td>
+        <td style="color: #111;">{{ $g->nama_guru }}</td>
+        <td style="color: #111;">{{ $g->mata_pelajaran }}</td>
         <td>
             <form action="{{ route('guru.destroy',$g->id) }}" method="POST">
 

@@ -1,8 +1,8 @@
 @extends('layouts.apk')
-@section('ruang', 'Ruangan Baru')
+@section('title', 'Tambah Ruangan Baru')
 @section('content')
 <div class="wrapper">
-    <h1 class="text-center text-uppercase">Buat Data Ruangan baru</h1>
+    <h1 class="text-center text-uppercase">Tambah Data Ruangan baru</h1>
 
     <!-- logika if -->
     @if(session('success'))

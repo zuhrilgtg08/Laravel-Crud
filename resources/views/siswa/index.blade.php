@@ -4,7 +4,7 @@
     <div class="row">
         <div class="container">
             <div class="text-center">
-                <h2 class="text-capitalize fw-normal">table data siswa</h2>
+                <h2 class="text-capitalize fw-normal">tabel data siswa</h2>
         </div>
         <div class="mr-3 my-2">
             <a class="btn btn-success" href="{{ route('siswa.create') }}">Tambah Data Siswa Baru</a>
@@ -29,11 +29,11 @@
     $x = 1;
     @endphp
     @foreach ($siswa as $mhs)
-    <tr class="text-center">
-        <td>{{ $x++ }}</td>
-        <td>{{ $mhs->nis }}</td>
-        <td>{{ $mhs->nama_siswa }}</td>
-        <td>{{ $mhs->jurusan }}</td>
+    <tr class="text-center text-dark">
+        <td style="color: #111;">{{ $x++ }}</td>
+        <td style="color: #111;">{{ $mhs->nis }}</td>
+        <td style="color: #111;">{{ $mhs->nama_siswa }}</td>
+        <td style="color: #111;">{{ $mhs->jurusan }}</td>
         <td>
             <form action="{{ route('siswa.destroy',$mhs->id) }}" method="POST">
 
