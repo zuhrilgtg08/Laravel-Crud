@@ -71,9 +71,7 @@ class KelasController extends Controller
     {
         $kelas = kelass::findOrFail($id);
 
-        return view('kelas.edit', [
-            'kelas' => $kelas
-        ]);
+        return view('kelas.edit', ['kelas' => $kelas]);
     }
 
     /**

@@ -18,6 +18,7 @@
     <p>{{ $teacher }}</p>
 </div>
 @endif
+
 <table class="table table-striped">
 
     <tr class="text-center bg-info text-white fw-normal">

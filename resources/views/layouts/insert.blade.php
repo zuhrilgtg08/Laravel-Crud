@@ -30,7 +30,7 @@
 	                </button>
                 </div>
 
-                <h1><a href="index.html" class="logo">Online Class</a></h1>
+                <h1><a href="index.html" class="logo">Online Education</a></h1>
         
                 <ul class="list-unstyled components mb-5">
                     <li>
@@ -55,6 +55,10 @@
 
                     <li>
                         <a href="/kelas"><span class="fa fa-sticky-note mr-3"></span>Kelas</a>
+                    </li>
+
+                    <li>
+                        <a href="/jadwal"><span class="fa fa-sticky-note mr-3"></span>Jadwal</a>
                     </li>
 
                     <li>
