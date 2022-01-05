@@ -10,6 +10,7 @@ use App\Http\Controllers\DasboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\FormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,8 @@ Route::resource('kelas', KelasController::class);
 Route::resource('ruang', RuangController::class);
 Route::resource('dasboard', DasboardController::class);
 Route::resource('jadwal', JadwalController::class);
+Route::resource('form', FormController::class);
+// Route::post('reset/{id}', [namacontroller::class, 'namamethod']);
 
 Auth::routes();
 

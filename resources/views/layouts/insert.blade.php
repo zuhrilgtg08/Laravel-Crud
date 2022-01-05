@@ -62,6 +62,10 @@
                     </li>
 
                     <li>
+                        <a href="/form"><span class="fa fa-sticky-note mr-3"></span>Multiple Form</a>
+                    </li>
+
+                    <li>
                         <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
 
