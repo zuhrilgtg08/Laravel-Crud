@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="wrapper">
-    <h1 style="text-align: center;">Crud Data Barang</h1>
+    <h1 style="text-align: center;">Data Barang</h1>
 
     @if (session('success'))
     <div class=" alert alert-success">
@@ -16,7 +16,7 @@
 
     <!-- table -->
 
-    <table class="table table-striped table-hover">
+    <table class="table table-striped">
         <thead>
             <tr class="bg-success text-center text-white">
                 <th>Barang</th>

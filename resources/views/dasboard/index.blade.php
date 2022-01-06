@@ -69,6 +69,10 @@
                     </li>
 
                     <li>
+                        <a href="/barang"><span class="fa fa-archive mr-3"></span>Barang</a>
+                    </li>
+
+                    <li>
                         <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
 

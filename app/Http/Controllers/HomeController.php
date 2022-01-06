@@ -8,6 +8,7 @@ use App\Models\kelass;
 use App\Models\ruang;
 use App\Models\jadwal;
 use App\Models\form;
+use App\Models\barang;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -35,7 +36,8 @@ class HomeController extends Controller
             'kelas' => kelass::get(),
             'ruang' => ruang::get(),
             'jadwal' => jadwal::get(),
-            'user' => User::get()
+            'user' => User::get(),
+            'barang' => barang::get()
         ];
         return view('home', $show);
     }
