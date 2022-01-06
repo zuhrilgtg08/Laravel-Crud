@@ -33,7 +33,7 @@
             <div class="mb-3">
                 <label for="guru" class="form-label text-capitalize text-dark">nama guru</label>
                 <select name="id_guru" id="guru" class="form-control form-select">
-                    <option value="" selected disabled>Pilih Guru : </option>
+                    <option value="" disabled>Pilih Guru : </option>
                         @foreach ($guru as $gur)
                             <option value="{{ $gur->id }}" 
                                 @if ($gur->id == $jadwal->id_guru)
@@ -47,7 +47,7 @@
             <div class="mb-3">
                 <label for="kelas" class="form-label text-capitalize text-dark">nama kelas</label>
                 <select name="id_kelas" id="kelas" class="form-select form-control">
-                    <option value="" selected disabled>Daftar Kelas : </option>
+                    <option value="" disabled>Daftar Kelas : </option>
                         @foreach ($kelas as $kel)
                             <option value="{{ $kel->id }}"
                                 @if($kel->id == $jadwal->id_kelas)
@@ -61,7 +61,7 @@
             <div class="mb-3">
                 <label for="ruangan" class="form-label text-capitalize text-dark">nama ruangan</label>
                 <select name="id_ruangan" id="ruangan" class="form-select form-control">
-                    <option value="" selected disabled>Pilih Ruangan : </option>
+                    <option value="" disabled>Pilih Ruangan : </option>
                         @foreach ($ruangan as $ruang)
                             <option value="{{ $ruang->id }}" 
                                 @if($ruang->id == $jadwal->id_ruangan)

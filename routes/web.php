@@ -37,6 +37,8 @@ Route::resource('ruang', RuangController::class);
 Route::resource('dasboard', DasboardController::class);
 Route::resource('jadwal', JadwalController::class);
 Route::resource('form', FormController::class);
+Route::post('user/reset/{id}', [FormController::class, 'reset']);
+
 // Route::post('reset/{id}', [namacontroller::class, 'namamethod']);
 
 Auth::routes();

@@ -36,7 +36,7 @@
             <div class="mb-3">
                 <label for="guru" class="form-label text-capitalize">nama guru</label>
                 <select name="id_guru" id="guru" class="form-select">
-                    <option value="" selected disable>Pilih Guru : </option>
+                    <option value="" disabled>Pilih Guru : </option>
                         @foreach ($guru as $gur)
                             <option value="{{ $gur->id }}">{{ $gur->nama_guru }}</option>
                         @endforeach
@@ -46,7 +46,7 @@
             <div class="mb-3">
                 <label for="kelas" class="form-label text-capitalize">nama kelas</label>
                 <select name="id_kelas" id="kelas" class="form-select">
-                    <option value="" selected disable>Daftar Kelas : </option>
+                    <option value="" disabled>Daftar Kelas : </option>
                         @foreach ($kelas as $kel)
                             <option value="{{ $kel->id }}">{{ $kel->nama_kelas }}</option>
                         @endforeach
@@ -56,7 +56,7 @@
             <div class="mb-3">
                 <label for="ruangan" class="form-label text-capitalize">nama ruangan</label>
                 <select name="id_ruangan" id="ruangan" class="form-select">
-                    <option value="" selected disable>Pilih Ruangan : </option>
+                    <option value="" disabled>Pilih Ruangan : </option>
                         @foreach ($ruangan as $ruang)
                             <option value="{{ $ruang->id }}">{{ $ruang->nama_ruangan }}</option>
                         @endforeach

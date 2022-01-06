@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\form;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 
 class FormController extends Controller
 {
@@ -14,7 +17,7 @@ class FormController extends Controller
      */
     public function index()
     {
-        $form = Form::all();
+        $form = User::all();
 
         return view('formMultiple.index', compact('form'));
     }
@@ -26,7 +29,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('formMultiple.create');
+        // return view('formMultiple.create');
     }
 
     /**
@@ -37,18 +40,18 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+        // $request->validate([
+        //     'nama' => 'required',
+        //     'email' => 'required',
+        //     'password' => 'required'
+        // ]);
 
-        $input = $request->all();
+        // $input = $request->all();
 
-        $form = Form::create($input);
-        // Form::create($request->all());
+        // $form = Form::create($input);
+        // // Form::create($request->all());
 
-        return back()->with('success', 'Form Baru Berhasil Dibuat');
+        // return back()->with('success', 'Form Baru Berhasil Dibuat');
     }
 
     /**
@@ -70,7 +73,7 @@ class FormController extends Controller
      */
     public function edit($id)
     {
-        $form = Form::findOrFail($id);
+        $form = User::findOrFail($id);
 
         return view('formMultiple.edit', [
             'form' => $form
@@ -87,12 +90,11 @@ class FormController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required',
+            'name' => 'required',
             'email' => 'required|max:150',
-            'password' => 'required'
         ]);
 
-        $form = Form::find($id)->update($request->all());
+        $form = User::find($id)->update($request->all());
 
         return back()->with('success', 'Form Berhasil Di Perbarui');
     }
@@ -105,10 +107,36 @@ class FormController extends Controller
      */
     public function destroy($id)
     {
-        $form = Form::find($id);
+        $form = User::find($id);
 
         $form->delete();
 
         return back()->with('success', 'Form Berhasil Di Hapus.');
+    }
+
+    public function reset(Request $request, $id)
+    {
+        $form = User::findOrFail($id);
+
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required',
+            'con_password' => 'required'
+        ]);
+
+        if($form){
+            if(Hash::check($request->old_password, $form->password) ){
+                if($request->new_password == $request->con_password){
+                    User::find($id)->update([
+                        'password' => Hash::make($request->new_password)
+                    ]);
+
+                    return back()->with('success', 'Password Berhasil Di Reset.');
+                }else{
+                    return back()->with('danger', 'Password Gagal Di reset, Password baru tidak sama dengan Password konfirmasi');
+                }
+            }
+            
+        }
     }
 }
