@@ -19,7 +19,8 @@
 </div>
 @endif
 
-        <table class="table table-striped">
+        <table class="table table-striped display" id="table_id">
+            <thead>
                 <tr class="text-center bg-success text-white">
                     <th>No</th>
                     <th>Nama Guru</th>
@@ -27,8 +28,9 @@
                     <th>Nama Ruangan</th>
                     <th>Waktu</th>
                     <th>Tanggal</th>
-                    <th colspan="2">Ubah Jadwal</th>
+                    <th>Ubah Jadwal</th>
                 </tr>
+            </thead>
 
             @php
                 $no = 1;
