@@ -139,6 +139,11 @@
             $('#table_id').DataTable();
         } );
     </script>
+
+    <script>
+        var close = document.getElementById('close');
+        
+    </script>
 </body>
 
 </html>

@@ -21,7 +21,8 @@
                 <th>No</th>
                 <th>Nama User</th>
                 <th>Email User</th>
-                <th width="250px">Edit Form</th>
+                <th width="100px">Edit</th>
+                <th width="100px">Delete</th>
             </tr>
         </thead>
         
@@ -35,18 +36,33 @@
                     <td style="color: #111;">{{ $no++ }}</td>
                     <td style="color: #111;">{{ $item->name }}</td>
                     <td style="color: #111;">{{ $item->email }}</td>
-                    <td>
-                        <form action="{{ route('form.destroy',$item->id) }}" method="POST">
+                    <td><a class="btn btn-primary" style="width:100px;" href="{{ route('form.edit',$item->id) }}">Edit</a></td>
+                    <td><button type="submit" class="btn btn-danger" style="width:100px;" data-target="#myModal" data-toggle="modal">Delete</button></td>
 
+                    <div class="modal" tabindex="-1" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Delete Data</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                                </div>
 
-                            <a class="btn btn-primary" style="width:100px;" href="{{ route('form.edit',$item->id) }}">Ubah</a>
+                                    <div class="modal-body">
+                                        <p>Yakin Ingin hapus data ini ? </p>
+                                    </div>
 
-                            @csrf
-                            @method('DELETE')
-
-                            <button type="submit" class="btn btn-danger" style="width:100px;">Hapus</button>
-                        </form>
-                    </td>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <form method="POST" action="{{ url('form', $item->id ) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" style="width: 100px;">Delete</button>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </tr>
             @endforeach
         </tbody>
