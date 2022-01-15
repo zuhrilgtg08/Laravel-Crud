@@ -16,12 +16,13 @@
 
     <!-- table -->
 
-    <table class="table table-striped">
+    <table class="table table-striped display" id="table_id">
         <thead>
             <tr class="bg-success text-center text-white">
                 <th>Barang</th>
                 <th>Jumlah Barang</th>
-                <th colspan="2">Edit Data</th>
+                <th>Edit Data</th>
+                <th>Hapus Data</th>
             </tr>
         </thead>
 
@@ -39,6 +40,15 @@
             </tr>
             @endforeach
         </tbody>
+
+        <tfoot>
+            <tr class="bg-success text-center text-white">
+                <th>Barang</th>
+                <th>Jumlah Barang</th>
+                <th>Edit Data</th>
+                <th>Hapus Data</th>
+            </tr>
+        </tfoot>
     </table>
 </div>
 @endsection

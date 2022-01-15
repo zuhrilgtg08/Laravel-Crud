@@ -1,7 +1,7 @@
 @extends('layouts.insert')
 @section('title', 'Data Siswa')
 @section('content')
-    <div class="row">
+    <div class="wrapper">
         <div class="container">
             <div class="text-center">
                 <h2 class="text-capitalize fw-normal">tabel data siswa</h2>
@@ -9,15 +9,14 @@
         <div class="mr-3 my-2">
             <a class="btn btn-success" href="{{ route('siswa.create') }}">Tambah Data Siswa Baru</a>
         </div>
-    </div>
 
-@if ($pesan = Session::get('success'))
-<div class="alert alert-success">
-    <p>{{ $pesan }}</p>
-</div>
-@endif
+        @if ($pesan = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $pesan }}</p>
+            </div>
+        @endif
 
-<table class="table table-striped">
+        <table class="table table-striped display" id="table_id">
 
     <thead>
         <tr class="text-center bg-primary text-white">
@@ -25,7 +24,8 @@
             <th>NISN</th>
             <th>Nama Siswa</th>
             <th>Jurusan</th>
-            <th width="280px">Edit Data</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     
@@ -43,18 +43,19 @@
                     <form action="{{ route('siswa.destroy',$mhs->id) }}" method="POST">
 
 
-                        <a class="btn btn-primary" href="{{ route('siswa.edit',$mhs->id) }}" style="width: 100px;">Ubah</a>
+                        <a class="btn btn-primary" href="{{ route('siswa.edit',$mhs->id) }}" style="width: 100px;">Edit</a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger ml-3" style="width:100px;">Hapus</button>
+                        <td><button type="submit" class="btn btn-danger ml-3" style="width:100px;">Delete</button></td>
                     </form>
                 </td>
             </tr>
         @endforeach
     </tbody>
 </table>
+    </div>
 @endsection
 
 

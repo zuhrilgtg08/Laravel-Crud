@@ -15,35 +15,41 @@
         </div>
     @endif
 
-    <table class="table table-striped">
-        <tr class="text-center bg-primary text-white fw-normal">
-            <th>No</th>
-            <th>Nama User</th>
-            <th>Email User</th>
-            <th width="250px">Edit Form</th>
-        </tr>
+    <table class="table table-striped display" id="table_id">
+        <thead>
+            <tr class="text-center bg-primary text-white fw-normal">
+                <th>No</th>
+                <th>Nama User</th>
+                <th>Email User</th>
+                <th width="250px">Edit Form</th>
+            </tr>
+        </thead>
+        
         @php
             $no = 1;
         @endphp
 
-        @foreach ($form as $item)
-            <tr class="text-center">
-                <td style="color: #111;">{{ $no++ }}</td>
-                <td style="color: #111;">{{ $item->name }}</td>
-                <td style="color: #111;">{{ $item->email }}</td>
-                <td>
-                    <form action="{{ route('form.destroy',$item->id) }}" method="POST">
+        <tbody>
+            @foreach ($form as $item)
+                <tr class="text-center">
+                    <td style="color: #111;">{{ $no++ }}</td>
+                    <td style="color: #111;">{{ $item->name }}</td>
+                    <td style="color: #111;">{{ $item->email }}</td>
+                    <td>
+                        <form action="{{ route('form.destroy',$item->id) }}" method="POST">
 
 
-                    <a class="btn btn-primary" style="width:100px;" href="{{ route('form.edit',$item->id) }}">Ubah</a>
+                            <a class="btn btn-primary" style="width:100px;" href="{{ route('form.edit',$item->id) }}">Ubah</a>
 
-                    @csrf
-                    @method('DELETE')
+                            @csrf
+                            @method('DELETE')
 
-                    <button type="submit" class="btn btn-danger" style="width:100px;">Hapus</button>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
+                            <button type="submit" class="btn btn-danger" style="width:100px;">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+        
     </table>
 @endsection
