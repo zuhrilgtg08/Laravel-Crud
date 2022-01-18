@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SiswaController;
@@ -7,10 +8,9 @@ use App\Http\Controllers\KelasController;
 use App\Http\Controllers\RuangController;
 use App\Htpp\Controllers\HomeController;
 use App\Http\Controllers\DasboardController;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\KomputerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +37,7 @@ Route::resource('ruang', RuangController::class);
 Route::resource('dasboard', DasboardController::class);
 Route::resource('jadwal', JadwalController::class);
 Route::resource('form', FormController::class);
+Route::resource('komputer', KomputerController::class);
 Route::post('user/reset/{id}', [FormController::class, 'reset']);
 
 // Route::post('reset/{id}', [namacontroller::class, 'namamethod']);

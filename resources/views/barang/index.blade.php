@@ -6,7 +6,7 @@
     <h1 style="text-align: center;">Data Barang</h1>
 
     @if (session('success'))
-    <div class=" alert alert-success">
+    <div class=" alert alert-danger">
         {{ session('success') }}
     </div>
     @endif

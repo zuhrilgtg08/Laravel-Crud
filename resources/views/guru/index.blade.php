@@ -14,7 +14,7 @@
 </div>
 
 @if ($teacher = Session::get('success'))
-<div class="alert alert-success">
+<div class="alert alert-danger">
     <p>{{ $teacher }}</p>
 </div>
 @endif
@@ -27,7 +27,8 @@
             <th>Nip</th>
             <th>Nama Guru</th>
             <th>Mata Pelajaran</th>
-            <th width="250px">Edit Data</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     
@@ -41,18 +42,32 @@
                     <td style="color: #111;">{{ $g->nip }}</td>
                     <td style="color: #111;">{{ $g->nama_guru }}</td>
                     <td style="color: #111;">{{ $g->mata_pelajaran }}</td>
-                    <td>
-                        <form action="{{ route('guru.destroy',$g->id) }}" method="POST">
+                    <td><a class="btn btn-primary" style="width:100px;" href="{{ route('guru.edit',$g->id) }}">Edit</a></td>
+                    <td style="width: 100px"><button class="btn btn-danger" style="width: 100px;" data-target="#myModal" data-toggle="modal">Delete</button></td>
+                    <div class="modal" tabindex="-1" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Delete Data Table Guru</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                                </div>
 
+                                    <div class="modal-body">
+                                        <p>Are you sure Delete Your data ?</p>
+                                    </div>
 
-                            <a class="btn btn-primary" style="width:100px;" href="{{ route('guru.edit',$g->id) }}">Ubah</a>
-
-                            @csrf
-                            @method('DELETE')
-
-                            <button type="submit" class="btn btn-danger" style="width:100px;">Hapus</button>
-                        </form>
-                    </td>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <form method="POST" action="{{ url('guru', $g->id ) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" style="width: 100px;">Delete</button>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </tr>
             @endforeach
     </tbody>

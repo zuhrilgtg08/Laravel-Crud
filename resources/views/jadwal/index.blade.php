@@ -14,7 +14,7 @@
 
 {{-- alert --}}
 @if ($buku = Session::get('success'))
-<div class="alert alert-success">
+<div class="alert alert-danger">
     <p>{{ $buku }}</p>
 </div>
 @endif
@@ -28,7 +28,8 @@
                     <th>Nama Ruangan</th>
                     <th>Waktu</th>
                     <th>Tanggal</th>
-                    <th>Ubah Jadwal</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -44,18 +45,31 @@
                         <td style="color: #111;">{{ $dat->nama_ruangan }}</td>
                         <td style="color: #111;">{{ $dat->mulai}} - {{ $dat->akhir }}</td>
                         <td style="color: #111;">{{ $dat->tanggal }}</td>
-                        <td>
-                            <form action="{{ route('jadwal.destroy',$dat->id) }}" method="POST">
+                        <td><a class="btn btn-primary" style="width:100px;" href="{{ route('jadwal.edit',$dat->id) }}">Edit</a></td>
+                        <td style="width: 100px"><button class="btn btn-danger" style="width: 100px;" data-target="#myModal" data-toggle="modal">Delete</button></td>
+                        <div class="modal" tabindex="-1" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title">Delete Data Table Jadwal</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                                    </div>
 
+                                    <div class="modal-body">
+                                        <p>Are you sure Delete Your data ?</p>
+                                    </div>
 
-                                <a class="btn btn-primary" style="width:100px;" href="{{ route('jadwal.edit',$dat->id) }}">Ubah</a>
-
-                                @csrf
-                                @method('DELETE')
-
-                                <button type="submit" class="btn btn-danger" style="width:100px;">Hapus</button>
-                            </form>
-                        </td>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <form method="POST" action="{{ url('jadwal', $dat->id ) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" style="width: 100px;">Delete</button>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </tr>
                 @endforeach
             </tbody>

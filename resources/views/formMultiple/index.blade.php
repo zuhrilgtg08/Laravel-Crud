@@ -10,7 +10,7 @@
     </div>
 
     @if ($forum = Session::get('success'))
-        <div class="alert alert-success">
+        <div class="alert alert-danger">
             <p>{{ $forum }}</p>
         </div>
     @endif
