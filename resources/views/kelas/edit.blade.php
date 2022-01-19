@@ -35,13 +35,13 @@
                 @csrf
                 @method('PUT')
                 <label for="nama" class="form-label font-weight-bold">Nama Kelas : </label>
-                <input type="text" name="nama_kelas" class="form-control mb-3" id="nama" value="{{ $kelas->nama_kelas }}" placeholder="Ubah Nama Kelas...">
+                <input type="text" name="nama_kelas" class="form-control mb-3" id="nama" value="{{ $kelas->nama_kelas }}">
 
                 <label for="nomor" class="form-label font-weight-bold">Nomor Kelas : </label>
-                <input type="text" name="nomor_kelas" class="form-control mb-3" id="nomor" value="{{ $kelas->nomor_kelas }}" placeholder="Ubah Nomor Kelas...">
+                <input type="text" name="nomor_kelas" class="form-control mb-3" id="nomor" value="{{ $kelas->nomor_kelas }}">
 
                 <label for="wali" class="fomr-label font-weight-bold">Wali Kelas : </label>
-                <input type="text" name="wali_kelas" class="form-control mb-3" id="wali" value="{{ $kelas->wali_kelas }}" placeholder="Ubah Wali Kelas...">
+                <input type="text" name="wali_kelas" class="form-control mb-3" id="wali" value="{{ $kelas->wali_kelas }}">
             
         </div>
 

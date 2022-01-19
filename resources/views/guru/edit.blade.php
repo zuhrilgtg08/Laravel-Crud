@@ -29,17 +29,17 @@
 
         <div class="form-group mb-3">
             <label for="nip">NIP Guru</label>
-            <input type="text" name="nip" id="nip" class="form-control" value="{{ $guru->nip }}" placeholder="Ubah Nip Guru...">
+            <input type="text" name="nip" id="nip" class="form-control" value="{{ $guru->nip }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="nama">Nama Guru</label>
-            <input type="text" name="nama_guru" id="nama" class="form-control" value="{{ $guru->nama_guru }}" placeholder="Ubah Data Nama Guru...">
+            <input type="text" name="nama_guru" id="nama" class="form-control" value="{{ $guru->nama_guru }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="mapel">Mata Pelajaran</label>
-            <input type="text" name="mata_pelajaran" id="mapel" class="form-control" value="{{ $guru->mata_pelajaran }}" placeholder="Ubah Mata Pelajaran...">
+            <input type="text" name="mata_pelajaran" id="mapel" class="form-control" value="{{ $guru->mata_pelajaran }}">
         </div>
 
 

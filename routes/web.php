@@ -11,6 +11,7 @@ use App\Http\Controllers\DasboardController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\KomputerController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +46,11 @@ Route::post('user/reset/{id}', [FormController::class, 'reset']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['prefix' => 'setting'], function () {
+    //change user profile
+    Route::get('profile/{id}', [ProfileController::class, 'index'])->name('profile');
+    Route::put('profile/{id}', [ProfileController::class, 'profile'])->name('profile.update');
+    //change password
+    Route::get('profile/password/{id}', [ProfileController::class, 'password'])->name('password');
+    Route::put('profile/password/{id}', [ProfileController::class, 'changePassword'])->name('password.change');
+});

@@ -34,13 +34,13 @@
             <form method="POST" action="{{ url('guru') }}">
                 @csrf
                 <label for="nip" class="form-label">NIP Guru : </label>
-                <input type="text" name="nip" class="form-control mb-3" id="nip" placeholder="Nip Guru...">
+                <input type="text" name="nip" class="form-control mb-3" id="nip">
 
                 <label for="nama" class="form-label">Nama Guru : </label>
-                <input type="text" name="nama_guru" class="form-control mb-3" id="nama" placeholder="Nama Guru...">
+                <input type="text" name="nama_guru" class="form-control mb-3" id="nama">
 
                 <label for="mapel" class="form-label">Mata Pelajaran : </label>
-                <input type="text" name="mata_pelajaran" class="form-control mb-3" id="mapel" placeholder="Mata Pelajaran...">
+                <input type="text" name="mata_pelajaran" class="form-control mb-3" id="mapel">
         </div>
 
         <div class="card-footer">

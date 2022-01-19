@@ -7,8 +7,8 @@
         <div class="text-center">
             <h2 class="fw fw-normal">Tabel Data Guru</h2>
         </div>
-        <div class="mr-3 my-2">
-            <a class="btn btn-success" href="{{ route('guru.create') }}"> Tambah Data Guru Baru</a>
+        <div class="float-right">
+            <a class="btn btn-success m-3" href="{{ route('guru.create') }}"> Tambah Data Guru</a>
         </div>
     </div>
 </div>

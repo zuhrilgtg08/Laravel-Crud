@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Komputer;
+use App\Models\Komputer;
 
 class KomputerController extends Controller
 {
@@ -14,7 +14,7 @@ class KomputerController extends Controller
      */
     public function index()
     {
-        $komputer = Komputer::all();
+        $komputer = komputer::all();
 
         return view('komputer.index', ['komputer' => $komputer]);
     }
@@ -26,7 +26,7 @@ class KomputerController extends Controller
      */
     public function create()
     {
-        
+        return view('komputer.create');
     }
 
     /**
@@ -37,7 +37,17 @@ class KomputerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'namaBarang' => 'required',
+            'kodeBarang' => 'required',
+            'hargaBarang' => 'required',
+            'jumlahBarang' => 'required'
+        ]);
+        $input = $request->all();
+
+        $komputer = komputer::create($input);
+
+        return back()->with('success', 'Barang Berhasil di Tambahkan');
     }
 
     /**
@@ -59,7 +69,11 @@ class KomputerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $komputer = komputer::findOrFail($id);
+
+        return view('komputer.edit', [
+            'komputer' => $komputer
+        ]);
     }
 
     /**
@@ -71,7 +85,16 @@ class KomputerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'namaBarang' => 'required',
+            'kodeBarang' => 'required',
+            'hargaBarang' => 'required',
+            'jumlahBarang' => 'required'
+        ]);
+
+        $komputer = komputer::find($id)->update($request->all());
+
+        return back()->with('success', 'Barang Berhasil di Update');
     }
 
     /**
@@ -82,6 +105,10 @@ class KomputerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $komputer = komputer::find($id);
+
+        $komputer->delete();
+
+        return back()->with('success', ' Barang Berhasil di Hapus.');
     }
 }

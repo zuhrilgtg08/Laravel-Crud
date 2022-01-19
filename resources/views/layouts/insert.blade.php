@@ -72,6 +72,10 @@
                     </li>
 
                     <li>
+                        <a href="/komputer"><span class="fa fa-desktop mr-3"></span>Elektronik</a>
+                    </li>
+
+                    <li>
                         <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
 

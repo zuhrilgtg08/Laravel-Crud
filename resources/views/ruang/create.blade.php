@@ -29,17 +29,17 @@
         @csrf
         <div class="form-group mb-3 rounded bg-success text-white p-md-1">
             <label for="nomor">Nomor Ruangan : </label>
-            <input type="text" name="nomor_ruangan" class="form-control" id="nomor" placeholder="Nomor Ruangan...">
+            <input type="text" name="nomor_ruangan" class="form-control" id="nomor">
         </div>
 
         <div class="form-group mb-3 rounded bg-success text-white p-md-1">
             <label for="nama">Nama Ruangan : </label>
-            <input type="text" name="nama_ruangan" class="form-control" id="nama" placeholder="Nama Ruangan...">
+            <input type="text" name="nama_ruangan" class="form-control" id="nama">
         </div>
 
         <div class="form-group mb-3 rounded bg-success text-white p-md-1">
             <label for="lantai">Lantai Ruangan : </label>
-            <input type="text" name="lantai_ruangan" class="form-control" id="lantai" placeholder="Lantai Ruangan...">
+            <input type="text" name="lantai_ruangan" class="form-control" id="lantai">
         </div>
         <button class="btn btn-primary mt-3" style="width: 100px;">kirim</button>
     </form>

@@ -6,8 +6,8 @@
         <div class="text-center">
             <h2 class="fw fw-normal">Tabel Jadwal</h2>
         </div>
-        <div class="mr-3 my-2">
-            <a class="btn btn-warning" href="{{ route('jadwal.create') }}">Buat Jadwal Baru</a>
+        <div class="mr-3 my-2 float-right">
+            <a class="btn btn-warning m-3" href="{{ route('jadwal.create') }}">Jadwal Baru</a>
         </div>
     </div>
 </div>

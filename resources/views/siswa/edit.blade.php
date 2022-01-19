@@ -28,17 +28,17 @@
         @method('PUT')
         <div class="form-group mb-3">
             <label for="input">NISN Siswa</label>
-            <input type="text" name="nis" id="input" class="form-control" value="{{ $siswa->nis }}" placeholder="Ubah NISN Siswa">
+            <input type="text" name="nis" id="input" class="form-control" value="{{ $siswa->nis }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="input">Nama Siswa</label>
-            <input type="text" name="nama_siswa" id="input" class="form-control" value="{{ $siswa->nama_siswa }}" placeholder="Ubah Data Nama Siswa...">
+            <input type="text" name="nama_siswa" id="input" class="form-control" value="{{ $siswa->nama_siswa }}">
         </div>
 
         <div class="form-group mb-3">
             <label for="input">Jurusan</label>
-            <input type="text" name="jurusan" id="input" class="form-control" value="{{ $siswa->jurusan }}" placeholder="Ubah Data Jurusan...">
+            <input type="text" name="jurusan" id="input" class="form-control" value="{{ $siswa->jurusan }}">
         </div>
 
         <button class="btn btn-primary" style="width: 100px;">Kirim</button>

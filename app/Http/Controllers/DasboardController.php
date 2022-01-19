@@ -15,7 +15,7 @@ class DasboardController extends Controller
     public function index()
     {
         $dasboard = dasboard::all();
-        return view('dasboard.index', ['dasboard'=>$dasboard]);
+        return view('dasboard.index', ['dasboard' => $dasboard]);
     }
 
     /**

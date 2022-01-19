@@ -34,13 +34,13 @@
                 @csrf
                 @method('PUT')
                 <label for="input" class="form-label">Nomor Ruangan : </label>
-                <input type="text" name="nomor_ruangan" class="form-control mb-3" id="input" value="{{ $ruang->nomor_ruangan }}" placeholder="Ubah Nomor Ruangan...">
+                <input type="text" name="nomor_ruangan" class="form-control mb-3" id="input" value="{{ $ruang->nomor_ruangan }}">
 
                 <label for="nama" class="form-label">Nama Ruangan : </label>
-                <input type="text" name="nama_ruangan" class="form-control mb-3" id="nama" value="{{ $ruang->nama_ruangan }}" placeholder="Ubah Nomor Ruangan...">
+                <input type="text" name="nama_ruangan" class="form-control mb-3" id="nama" value="{{ $ruang->nama_ruangan }}">
 
                 <label for="lantai" class="form-label">Lantai Ruangan : </label>
-                <input type="text" name="lantai_ruangan" class="form-control mb-3" id="lantai" value="{{ $ruang->lantai_ruangan }}" placeholder="Ubah Lantai Ruangan...">
+                <input type="text" name="lantai_ruangan" class="form-control mb-3" id="lantai" value="{{ $ruang->lantai_ruangan }}">
         </div>
 
         <div class="card-footer">

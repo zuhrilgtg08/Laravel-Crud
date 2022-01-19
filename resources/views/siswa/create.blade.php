@@ -30,17 +30,17 @@
         @csrf
         <div class="form-group mb-3">
             <label for="exampleInput">NISN</label>
-            <input type="text" name="nis" class="form-control" id="exampleInput" placeholder="NISN Siswa...">
+            <input type="text" name="nis" class="form-control" id="exampleInput">
         </div>
 
         <div class="form-group mb-3">
             <label for="exampleInpu">Nama Siswa</label>
-            <input type="text" name="nama_siswa" class="form-control" id="exampleInput" placeholder="Nama Siswa...">
+            <input type="text" name="nama_siswa" class="form-control" id="exampleInput">
         </div>
 
         <div class="form-group mb-3">
             <label for="example">Jurusan</label>
-            <input type="text" name="jurusan" class="form-control" id="example" placeholder="Jurusan...">
+            <input type="text" name="jurusan" class="form-control" id="example">
         </div>
         <button type="submit" class="btn btn-danger" style="width: 100px;">Kirim</button>
     </form>

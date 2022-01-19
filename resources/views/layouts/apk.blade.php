@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <!-- <link rel="stylesheet" href="{{ asset('css/guru.css') }}" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
@@ -15,12 +14,26 @@
     <!-- sidebar style -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('newCss/style.css') }}">
 
-    <!-- Custom fonts for this template-->
-    <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template-->
-    <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{ asset('maintemplate/assets/images/favicon.ico') }}" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="{{ asset('maintemplate/assets/pages/waves/css/waves.min.css') }}" type="text/css" media="all">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/bootstrap/css/bootstrap.min.css') }}">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="{{ asset('maintemplate/assets/pages/waves/css/waves.min.css') }}" type="text/css" media="all">
+    <!-- themify icon -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/icon/themify-icons/themify-icons.css') }}">
+    <!-- font-awesome-n -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/font-awesome-n.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/font-awesome.min.css') }}">
+    <!-- scrollbar.css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/jquery.mCustomScrollbar.css') }}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/style.css') }}">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 
@@ -76,6 +89,10 @@
                     </li>
 
                     <li>
+                        <a href="/komputer"><span class="fa fa-desktop mr-3"></span>Elektronik</a>
+                    </li>
+
+                    <li>
                         <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
 
@@ -97,6 +114,7 @@
             <div id="content" class="p-4 p-md-5 pt-5">
                 @yield('content')
             </div>
+            
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -104,29 +122,44 @@
     <!-- font awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- script sidebar -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/popper.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
-
-    <!-- JavaScript -->
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{{ asset('template/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{{ asset('template/js/sb-admin-2.min.js') }}"></script>
-
+    
     <!-- Page level plugins -->
     <script src="{{ asset('template/vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('template/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('template/js/demo/chart-pie-demo.js') }}"></script>
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/popper.js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- waves js -->
+    <script src="{{ asset('maintemplate/assets/pages/waves/js/waves.min.js') }}"></script>
+
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+
+    <!-- slimscroll js -->
+    <script src="{{ asset('maintemplate/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+    <!-- menu js -->
+    <script src="{{ asset('maintemplate/assets/js/pcoded.min.js') }}"></script>
+    <script src="{{ asset('maintemplate/assets/js/vertical/vertical-layout.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Morris Chart js -->
+    <script src="{{ asset('maintemplate/assets/js/raphael/raphael.min.js') }}"></script>
+    <script src="{{ asset('maintemplate/assets/js/morris.js/morris.js') }}"></script>
+
+    <!-- Custom js -->
+    <script src="{{ asset('maintemplate/assets/pages/chart/morris/morris-custom-chart.js') }}"></script>
+    <script src="{{ asset('maintemplate/assets/js/pcoded.min.js') }}"></script>
+    <script src="{{ asset('maintemplate/assets/js/vertical/vertical-layout.min.js') }}"></script>
+    <script src="{{ asset('maintemplate/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/script.js') }}"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
