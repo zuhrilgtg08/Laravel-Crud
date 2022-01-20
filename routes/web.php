@@ -40,17 +40,15 @@ Route::resource('jadwal', JadwalController::class);
 Route::resource('form', FormController::class);
 Route::resource('komputer', KomputerController::class);
 Route::post('user/reset/{id}', [FormController::class, 'reset']);
-
+Route::get('/guru/delete/{id}', [GuruController::class, 'destroy']);
+Route::get('/siswa/delete/{id}', [SiswaController::class, 'destroy']);
+Route::get('/kelas/delete/{id}', [KelasController::class, 'destroy']);
+Route::get('/jadwal/delete/{id}', [JadwalController::class, 'destroy']);
+Route::get('/ruang/delete/{id}', [RuangController::class, 'destroy']);
+Route::get('/komputer/delete/{id}', [KomputerController::class, 'destroy']);
+Route::get('/form/delete/{id}', [FormController::class, 'destroy']);
 // Route::post('reset/{id}', [namacontroller::class, 'namamethod']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::group(['prefix' => 'setting'], function () {
-    //change user profile
-    Route::get('profile/{id}', [ProfileController::class, 'index'])->name('profile');
-    Route::put('profile/{id}', [ProfileController::class, 'profile'])->name('profile.update');
-    //change password
-    Route::get('profile/password/{id}', [ProfileController::class, 'password'])->name('password');
-    Route::put('profile/password/{id}', [ProfileController::class, 'changePassword'])->name('password.change');
-});

@@ -1,6 +1,6 @@
-@extends('layouts.apk')
+@extends('layouts.master')
+@section('title', 'Edit Data')
 @section('content')
-    {{-- edit form user --}}
     <div class="card m-3">
         <div class="card-header text-center bg-dark">
             <h5 class="text-white">Ubah Form User</h5>

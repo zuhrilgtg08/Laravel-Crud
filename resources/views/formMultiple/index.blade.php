@@ -1,5 +1,5 @@
-@extends('layouts.apk')
-@section('title', 'Form Multiple')
+@extends('layouts.master')
+@section('title', 'Data Users')
 @section('content')
     <div class="row">
         <div class="container">

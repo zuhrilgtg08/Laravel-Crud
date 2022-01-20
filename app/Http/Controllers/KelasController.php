@@ -47,7 +47,7 @@ class KelasController extends Controller
 
         $kelas = kelass::create($input);
 
-        return back()->with('success', 'Data Kelas Berhasil di Tambahkan');
+        return back()->with('success', 'Data Added Successfully');
     }
 
     /**
@@ -91,7 +91,7 @@ class KelasController extends Controller
 
         $kelas = kelass::find($id)->update($request->all());
 
-        return back()->with('success', 'Data Kelas Berhasil Di Perbarui');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -106,6 +106,6 @@ class KelasController extends Controller
 
         $kelas->delete();
 
-        return back()->with('success', ' Penghapusan berhasil.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 }

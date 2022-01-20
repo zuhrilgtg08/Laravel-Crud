@@ -49,7 +49,7 @@ class SiswaController extends Controller
         $siswa = siswa::create($input);
         // Siswa::create($request->all());
 
-        return back()->with('success', 'Data Siswa Berhasil Ditambahkan');
+        return back()->with('success', 'Data Added Successfully');
     }
 
     /**
@@ -95,7 +95,7 @@ class SiswaController extends Controller
 
         $siswa = siswa::find($id)->update($request->all());
 
-        return back()->with('success', 'Data Berhasil Di Perbarui');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -110,6 +110,6 @@ class SiswaController extends Controller
 
         $siswa->delete();
 
-        return back()->with('success', 'Data Berhasil Di Hapus.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 }

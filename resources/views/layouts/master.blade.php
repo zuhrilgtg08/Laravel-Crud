@@ -1,118 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Master Data Admin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title')</title>
 
-    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
-    <meta name="author" content="Codedthemes" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Favicon icon -->
-    <link rel="icon" href="{{ asset('maintemplate/assets/images/favicon.ico') }}" type="image/x-icon">
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-    <!-- waves.css -->
-    <link rel="stylesheet" href="{{ asset('maintemplate/assets/pages/waves/css/waves.min.css') }}" type="text/css" media="all">
-    <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/bootstrap/css/bootstrap.min.css') }}">
-    <!-- waves.css -->
-    <link rel="stylesheet" href="{{ asset('maintemplate/assets/pages/waves/css/waves.min.css') }}" type="text/css" media="all">
-    <!-- themify icon -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/icon/themify-icons/themify-icons.css') }}">
-    <!-- font-awesome-n -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/font-awesome-n.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/font-awesome.min.css') }}">
-    <!-- scrollbar.css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/jquery.mCustomScrollbar.css') }}">
-    <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('maintemplate/assets/css/style.css') }}">
+    <!-- sidebar 09 -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('sidebar-09/css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- SB Admin -->
+    <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('template/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- data Tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
 </head>
-
 <body>
-    <!-- Pre-loader start -->
-    <div class="theme-loader">
-        <div class="loader-track">
-            <div class="preloader-wrapper">
-                <div class="spinner-layer spinner-blue">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-                <div class="spinner-layer spinner-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-
-                <div class="spinner-layer spinner-yellow">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-
-                <div class="spinner-layer spinner-green">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
+    <div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
+            </div>
+            
+            <div class="img bg-wrap text-center py-4" style="background-image: url({{ asset('sidebar-09/images/bg_1.jpg') }});">
+                <div class="user-logo">
+                    <div class="img" style="background-image: url({{ asset('sidebar-09/images/gtg.jfif') }});"></div>
+                    <h3>Ahmad Zuhril</h3>
                 </div>
             </div>
+
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="/home"><span class="fas fa-tachometer-alt mr-3"></span> Dasboard</a>
+                </li>
+
+                <li>
+                    <a href="/guru"><span class="fas fa-address-card mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Teacher Data</a>
+                </li>
+
+                <li>
+                    <a href="/siswa"><span class="fas fa-user-graduate mr-3"></span> Students Data</a>
+                </li>
+
+                <li>
+                    <a href="/kelas"><span class="fas fa-school mr-3"></span> Classroom Data</a>
+                </li>
+
+                <li>
+                    <a href="/ruang"><span class="fas fa-restroom mr-3"></span> Rooms Data</a>
+                </li>
+
+                <li>
+                    <a href="/komputer"><span class="fas fa-archive mr-3"></span> Items Data</a>
+                </li>
+
+                <li>
+                    <a href="/form"><span class="fas fa-folder-minus mr-3 notif"><small class="d-flex align-items-center justify-content-center">11</small></span> Users Data</a>
+                </li>
+
+                <li>
+                    <a href="/jadwal"><span class="fas fa-sticky-note mr-3 notif"><small class="d-flex align-items-center justify-content-center">9</small></span> Lesson Data</a>
+                </li>
+
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <span class="fas fa-sign-out-alt mr-3"></span> Sign Out                       
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
+            </ul>
+    	</nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            @yield('content')
         </div>
-    </div>
-    <!-- Pre-loader end -->
+	</div>
 
-    @yield('content')
-
-
-    <!-- Required Jquery -->
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery-ui/jquery-ui.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/popper.js/popper.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/bootstrap/js/bootstrap.min.js') }}"></script>
-    <!-- waves js -->
-    <script src="{{ asset('maintemplate/assets/pages/waves/js/waves.min.js') }}"></script>
-    <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
-
-    <!-- slimscroll js -->
-    <script src="{{ asset('maintemplate/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-
-    <!-- menu js -->
-    <script src="{{ asset('maintemplate/assets/js/pcoded.min.js') }}"></script>
-    <script src="{{ asset('maintemplate/assets/js/vertical/vertical-layout.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     
-    <script type="text/javascript" src="{{ asset('maintemplate/assets/js/script.js') }}"></script>
-    
 
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('template/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('template/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('template/js/sb-admin-2.min.js') }}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ asset('template/vendor/chart.js/Chart.min.js') }}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('template/js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('template/js/demo/chart-pie-demo.js') }}"></script>
+
+    <!-- script sidebar 09 -->
+    <script src="{{ asset('sidebar-09/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('sidebar-09/js/popper.js') }}"></script>
+    <script src="{{ asset('sidebar-09/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('sidebar-09/js/main.js') }}"></script>
+
+    <!-- data tables js -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    @yield('script')
+    <script>
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
+    </script>
 </body>
-
 </html>

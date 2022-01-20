@@ -1,8 +1,13 @@
-@extends('layouts.apk')
-@section('title', 'Tambah Data Guru')
+@extends('layouts.master')
+@section('title', 'Create Data')
 @section('content')
 <div class="wrapper">
-    <h2 class="text-center">Tambah Data Guru</h2>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h4 class="h4 mb-0 text-gray-800"> Add Teachers Data </h4>
+    </div>
+
+    <!-- tombol -->
+    <a href="/guru" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Back </a>
 
     <!-- logika if -->
     @if(session('success'))
@@ -10,9 +15,6 @@
         {{ session('success') }}
     </div>
     @endif
-
-    <!-- tombol -->
-    <a href="/guru" class="btn btn-warning mb-3">Kembali</a>
 
     <!-- jika error maka lakukan foreach -->
     @if($errors->any())
@@ -26,31 +28,25 @@
     @endif
 
     <div class="card">
-        <div class="card-header bg-success">
-            <h5 class="text-center text-light">Form Tambah</h5>
-        </div>
-
-        <div class="card-body">
+        <div class="card-body bg-secondary text-white">
             <form method="POST" action="{{ url('guru') }}">
                 @csrf
-                <label for="nip" class="form-label">NIP Guru : </label>
+                <label for="nip" class="form-label">NIS : </label>
                 <input type="text" name="nip" class="form-control mb-3" id="nip">
 
-                <label for="nama" class="form-label">Nama Guru : </label>
+                <label for="nama" class="form-label">Name : </label>
                 <input type="text" name="nama_guru" class="form-control mb-3" id="nama">
 
-                <label for="mapel" class="form-label">Mata Pelajaran : </label>
+                <label for="mapel" class="form-label">Subjects : </label>
                 <input type="text" name="mata_pelajaran" class="form-control mb-3" id="mapel">
         </div>
 
         <div class="card-footer">
-            <button class="btn btn-primary" style="width: 100px;">kirim</button>
+                <div class="col-12 text-md-center">
+                    <button class="btn btn-primary" style="width: 100px;">Add Data</button>
+                </div>
             </form>
         </div>
     </div>
-
-
-
-
 </div>
 @endsection
