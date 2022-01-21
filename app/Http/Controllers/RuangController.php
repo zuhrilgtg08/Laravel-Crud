@@ -46,7 +46,7 @@ class RuangController extends Controller
 
         $barang = ruang::create($input);
 
-        return back()->with('success', 'Data Ruangan Berhasil di Tambahkan');
+        return back()->with('success', 'Data Added Successfully');
     }
 
     /**
@@ -92,7 +92,7 @@ class RuangController extends Controller
 
         $ruang = ruang::find($id)->update($request->all());
 
-        return back()->with('success', 'Data Ruangan Berhasil Di Perbarui');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -107,6 +107,6 @@ class RuangController extends Controller
 
         $ruang->delete();
 
-        return back()->with('success', ' Penghapusan berhasil.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 }

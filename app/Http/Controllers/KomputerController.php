@@ -47,7 +47,7 @@ class KomputerController extends Controller
 
         $komputer = komputer::create($input);
 
-        return back()->with('success', 'Barang Berhasil di Tambahkan');
+        return back()->with('success', 'Data Added Successfully');
     }
 
     /**
@@ -94,7 +94,7 @@ class KomputerController extends Controller
 
         $komputer = komputer::find($id)->update($request->all());
 
-        return back()->with('success', 'Barang Berhasil di Update');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -109,6 +109,6 @@ class KomputerController extends Controller
 
         $komputer->delete();
 
-        return back()->with('success', ' Barang Berhasil di Hapus.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 }

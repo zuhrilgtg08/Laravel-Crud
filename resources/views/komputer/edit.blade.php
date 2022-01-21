@@ -1,17 +1,20 @@
-@extends('layouts.apk')
-@section('title', 'Ubah Data Barang')
+@extends('layouts.master')
+@section('title', 'Edit Data')
 @section('content')
 <div class="wrapper">
-    <h1 class="text-center">Edit Data</h1>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h4 class="h4 mb-0 text-gray-800"> Changes Data </h4>
+    </div>
+
+    <!-- tombol -->
+    <a href="/komputer" class="btn btn-warning mb-3"><i class="fas fa-arrow-left"></i> Back </a>
+
 
     @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
     @endif
-
-    <!-- tombol -->
-    <a href="/komputer" class="btn btn-warning mb-3">Kembali</a>
 
     @if($errors->any())
     <div class="alert alert-danger">
@@ -23,31 +26,39 @@
     </div>
     @endif
 
-    <form method="POST" action="{{ url('komputer', $komputer->id) }}">
-        @csrf
-        @method('PUT')
+    <div class="card">
+        <div class="card-body text-white" style="background: #BD33FF;>
+            <form method="POST" action="{{ url('komputer', $komputer->id) }}">
+                @csrf
+                @method('PUT')
 
-        <div class="form-group mb-3">
-            <label for="nama">Nama Barang</label>
-            <input type="text" name="namaBarang" id="nama" class="form-control" value="{{ $komputer->namaBarang }}">
+                <div class="form-group mb-3">
+                    <label for="nama">Name Items : </label>
+                    <input type="text" name="namaBarang" id="nama" class="form-control" value="{{ $komputer->namaBarang }}">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="kode">Code Items : </label>
+                    <input type="text" name="kodeBarang" id="kode" class="form-control" value="{{ $komputer->kodeBarang }}">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="jumlah">Amount Items : </label>
+                    <input type="text" name="jumlahBarang" id="jumlah" class="form-control" value="{{ $komputer->jumlahBarang }}">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="harga">Price Items : </label>
+                    <input type="text" name="hargaBarang" id="harga" class="form-control" value="{{ $komputer->hargaBarang }}">
+                </div>
         </div>
 
-        <div class="form-group mb-3">
-            <label for="kode">Kode Barang</label>
-            <input type="text" name="kodeBarang" id="kode" class="form-control" value="{{ $komputer->kodeBarang }}">
+        <div class="card-footer">
+                <div class="col-12 text-md-center">
+                    <button class="btn btn-success" style="width: 150px;"> Save </button>
+                </div>
+            </form>
         </div>
-
-        <div class="form-group mb-3">
-            <label for="jumlah">Jumlah Barang</label>
-            <input type="text" name="jumlahBarang" id="jumlah" class="form-control" value="{{ $komputer->jumlahBarang }}">
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="harga">Harga Barang</label>
-            <input type="text" name="hargaBarang" id="harga" class="form-control" value="{{ $komputer->hargaBarang }}">
-        </div>
-
-        <button class="btn btn-success" style="width: 150px;">Simpan Data</button>
-    </form>
+    </div>
 </div>
 @endsection

@@ -63,7 +63,7 @@ class JadwalController extends Controller
 
         $jadwal = Jadwal::create($input);
 
-        return back()->with('success', 'Jadwal Baru Sudah Dibuat');
+        return back()->with('success', 'Data Added Successfully');
     }
 
     /**
@@ -116,7 +116,7 @@ class JadwalController extends Controller
 
         $jadwal = jadwal::find($id)->update($request->all());
 
-        return back()->with('success', 'Jadwal Berhasil Di Perbarui');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -131,6 +131,6 @@ class JadwalController extends Controller
 
         $jadwal->delete();
 
-        return back()->with('success', 'Jadwal berhasil Dihapus.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 }

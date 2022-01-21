@@ -37,6 +37,19 @@
                 </tr>
             </thead>
 
+            <tfoot>
+                <tr class="text-center bg-danger text-white">
+                    <th>No</th>
+                    <th>Teachers</th>
+                    <th>Classroom</th>
+                    <th>Room</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </tfoot>
+
             @php
                 $no = 1;
             @endphp

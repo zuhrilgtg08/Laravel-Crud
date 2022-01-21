@@ -37,6 +37,16 @@
             </tr>
         </thead>
 
+        <tfoot>
+            <tr class="text-light bg-info">
+                <th>Class Name</th>
+                <th>Class Number</th>
+                <th>Homeroom Teacher</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </tfoot>
+
         <tbody>
             @foreach($kelass as $kls)
             <tr>

@@ -35,6 +35,17 @@
             <th>Delete</th>
         </tr>
     </thead>
+
+    <tfoot>
+        <tr class="text-center bg-info text-white fw-normal">
+            <th>No</th>
+            <th>NIS</th>
+            <th>Name</th>
+            <th>Subjects</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </tfoot>
     
     @php
     $no = 1;

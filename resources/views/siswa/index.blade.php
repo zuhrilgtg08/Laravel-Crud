@@ -35,6 +35,17 @@
                     <th>Delete</th>
                 </tr>
             </thead>
+
+            <tfoot>
+                <tr class="text-center bg-primary text-white">
+                    <th>No</th>
+                    <th>NISN</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </tfoot>
     
                 @php
                     $x = 1;

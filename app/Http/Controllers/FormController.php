@@ -96,7 +96,7 @@ class FormController extends Controller
 
         $form = User::find($id)->update($request->all());
 
-        return back()->with('success', 'Form Berhasil Di Perbarui');
+        return back()->with('success', 'Data Saved Successfully');
     }
 
     /**
@@ -111,7 +111,7 @@ class FormController extends Controller
 
         $form->delete();
 
-        return back()->with('success', 'Form Berhasil Di Hapus.');
+        return back()->with('success', 'Data Deleted Successfully');
     }
 
     public function reset(Request $request, $id)
@@ -131,9 +131,9 @@ class FormController extends Controller
                         'password' => Hash::make($request->new_password)
                     ]);
 
-                    return back()->with('success', 'Password Berhasil Di Reset.');
+                    return back()->with('success', 'Password Successfully Reset.');
                 }else{
-                    return back()->with('danger', 'Password Gagal Di reset, Password baru tidak sama dengan Password konfirmasi');
+                    return back()->with('danger', 'Password failed to reset, new password is not the same as confirmation password');
                 }
             }
             
